@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Button.setTitle("Car Sound", for: .normal)
+//        Button.setTitle("Car Sound", for: .normal)
         let soundImage = UIImage(named: "sound_picture.png")
         Button.setImage(soundImage?.withRenderingMode(.alwaysOriginal), for: .normal)
     }
