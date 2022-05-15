@@ -7,22 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47A952AA2830FB28003C079A /* metro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47A952A62830FB27003C079A /* metro.wav */; };
+		47A952AB2830FB28003C079A /* cafe.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47A952A72830FB28003C079A /* cafe.wav */; };
+		47A952AC2830FB28003C079A /* park.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47A952A82830FB28003C079A /* park.wav */; };
+		47A952AD2830FB28003C079A /* kitchen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47A952A92830FB28003C079A /* kitchen.wav */; };
+		47A952B12830FC15003C079A /* MLModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A952B02830FC15003C079A /* MLModelManager.swift */; };
+		47A952B728311F5E003C079A /* MLMultiArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A952B628311F5D003C079A /* MLMultiArray.swift */; };
+		47BF3725283133B90074FCB3 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BF3724283133B90074FCB3 /* SongTableViewCell.xib */; };
+		47BF3727283135020074FCB3 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF3726283135020074FCB3 /* SongTableViewCell.swift */; };
+		47BF3729283138E60074FCB3 /* denoiser.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 47BF3728283138E60074FCB3 /* denoiser.mlmodel */; };
 		47D18B702829279800456B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D18B6F2829279800456B04 /* AppDelegate.swift */; };
 		47D18B722829279800456B04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D18B712829279800456B04 /* SceneDelegate.swift */; };
 		47D18B742829279800456B04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D18B732829279800456B04 /* ViewController.swift */; };
 		47D18B772829279800456B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B752829279800456B04 /* Main.storyboard */; };
 		47D18B792829279A00456B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B782829279A00456B04 /* Assets.xcassets */; };
 		47D18B7C2829279A00456B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B7A2829279A00456B04 /* LaunchScreen.storyboard */; };
-		47D18B8B2829351500456B04 /* metro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B842829351400456B04 /* metro.wav */; };
-		47D18B8C2829351500456B04 /* car.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B852829351500456B04 /* car.wav */; };
-		47D18B8D2829351500456B04 /* traffic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B862829351500456B04 /* traffic.wav */; };
-		47D18B8E2829351500456B04 /* kitchen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B872829351500456B04 /* kitchen.wav */; };
-		47D18B8F2829351500456B04 /* park.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B882829351500456B04 /* park.wav */; };
-		47D18B902829351500456B04 /* meeting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B892829351500456B04 /* meeting.wav */; };
-		47D18B912829351500456B04 /* cafe.wav in Resources */ = {isa = PBXBuildFile; fileRef = 47D18B8A2829351500456B04 /* cafe.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47A952A62830FB27003C079A /* metro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = metro.wav; sourceTree = "<group>"; };
+		47A952A72830FB28003C079A /* cafe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cafe.wav; sourceTree = "<group>"; };
+		47A952A82830FB28003C079A /* park.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = park.wav; sourceTree = "<group>"; };
+		47A952A92830FB28003C079A /* kitchen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kitchen.wav; sourceTree = "<group>"; };
+		47A952B02830FC15003C079A /* MLModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLModelManager.swift; sourceTree = "<group>"; };
+		47A952B628311F5D003C079A /* MLMultiArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLMultiArray.swift; sourceTree = "<group>"; };
+		47BF3724283133B90074FCB3 /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		47BF3726283135020074FCB3 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		47BF3728283138E60074FCB3 /* denoiser.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = denoiser.mlmodel; sourceTree = "<group>"; };
 		47D18B6C2829279800456B04 /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D18B6F2829279800456B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D18B712829279800456B04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,13 +42,6 @@
 		47D18B782829279A00456B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D18B7B2829279A00456B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47D18B7D2829279A00456B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47D18B842829351400456B04 /* metro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = metro.wav; sourceTree = "<group>"; };
-		47D18B852829351500456B04 /* car.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = car.wav; sourceTree = "<group>"; };
-		47D18B862829351500456B04 /* traffic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = traffic.wav; sourceTree = "<group>"; };
-		47D18B872829351500456B04 /* kitchen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kitchen.wav; sourceTree = "<group>"; };
-		47D18B882829351500456B04 /* park.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = park.wav; sourceTree = "<group>"; };
-		47D18B892829351500456B04 /* meeting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = meeting.wav; sourceTree = "<group>"; };
-		47D18B8A2829351500456B04 /* cafe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cafe.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47A952A42830FABC003C079A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47BF3728283138E60074FCB3 /* denoiser.mlmodel */,
+				47A952A52830FB09003C079A /* Sounds */,
+				47D18B782829279A00456B04 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47A952A52830FB09003C079A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				47A952A72830FB28003C079A /* cafe.wav */,
+				47A952A92830FB28003C079A /* kitchen.wav */,
+				47A952A62830FB27003C079A /* metro.wav */,
+				47A952A82830FB28003C079A /* park.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		47D18B632829279800456B04 = {
 			isa = PBXGroup;
 			children = (
@@ -74,26 +99,15 @@
 				47D18B712829279800456B04 /* SceneDelegate.swift */,
 				47D18B732829279800456B04 /* ViewController.swift */,
 				47D18B752829279800456B04 /* Main.storyboard */,
-				47D18B782829279A00456B04 /* Assets.xcassets */,
-				47D18B83282934DE00456B04 /* Sounds */,
+				47A952A42830FABC003C079A /* Resources */,
 				47D18B7A2829279A00456B04 /* LaunchScreen.storyboard */,
 				47D18B7D2829279A00456B04 /* Info.plist */,
+				47A952B02830FC15003C079A /* MLModelManager.swift */,
+				47A952B628311F5D003C079A /* MLMultiArray.swift */,
+				47BF3724283133B90074FCB3 /* SongTableViewCell.xib */,
+				47BF3726283135020074FCB3 /* SongTableViewCell.swift */,
 			);
 			path = AudioPlayer;
-			sourceTree = "<group>";
-		};
-		47D18B83282934DE00456B04 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				47D18B8A2829351500456B04 /* cafe.wav */,
-				47D18B852829351500456B04 /* car.wav */,
-				47D18B872829351500456B04 /* kitchen.wav */,
-				47D18B892829351500456B04 /* meeting.wav */,
-				47D18B842829351400456B04 /* metro.wav */,
-				47D18B882829351500456B04 /* park.wav */,
-				47D18B862829351500456B04 /* traffic.wav */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,13 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D18B8E2829351500456B04 /* kitchen.wav in Resources */,
-				47D18B8C2829351500456B04 /* car.wav in Resources */,
-				47D18B8F2829351500456B04 /* park.wav in Resources */,
-				47D18B8B2829351500456B04 /* metro.wav in Resources */,
-				47D18B902829351500456B04 /* meeting.wav in Resources */,
-				47D18B912829351500456B04 /* cafe.wav in Resources */,
-				47D18B8D2829351500456B04 /* traffic.wav in Resources */,
+				47BF3725283133B90074FCB3 /* SongTableViewCell.xib in Resources */,
+				47A952AD2830FB28003C079A /* kitchen.wav in Resources */,
+				47A952AC2830FB28003C079A /* park.wav in Resources */,
+				47A952AB2830FB28003C079A /* cafe.wav in Resources */,
+				47A952AA2830FB28003C079A /* metro.wav in Resources */,
 				47D18B7C2829279A00456B04 /* LaunchScreen.storyboard in Resources */,
 				47D18B792829279A00456B04 /* Assets.xcassets in Resources */,
 				47D18B772829279800456B04 /* Main.storyboard in Resources */,
@@ -175,7 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D18B742829279800456B04 /* ViewController.swift in Sources */,
+				47A952B12830FC15003C079A /* MLModelManager.swift in Sources */,
+				47BF3727283135020074FCB3 /* SongTableViewCell.swift in Sources */,
 				47D18B702829279800456B04 /* AppDelegate.swift in Sources */,
+				47BF3729283138E60074FCB3 /* denoiser.mlmodel in Sources */,
+				47A952B728311F5E003C079A /* MLMultiArray.swift in Sources */,
 				47D18B722829279800456B04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +341,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K2DBWBN224;
+				DEVELOPMENT_TEAM = XZH6D6T2P2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -338,7 +354,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daryouush-first-swift-app.AudioPlayer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daryouush-first-swift-app.AudioPlayer-vashkpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,7 +369,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K2DBWBN224;
+				DEVELOPMENT_TEAM = XZH6D6T2P2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -366,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daryouush-first-swift-app.AudioPlayer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daryouush-first-swift-app.AudioPlayer-vashkpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

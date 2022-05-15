@@ -19,12 +19,17 @@ class ViewController: UIViewController {
         Button.setTitle("Car Sound", for: .normal)
         let soundImage = UIImage(named: "sound_picture.png")
         Button.setImage(soundImage?.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        MLModelManager.sharedManager.enhanceAudio("cafe")
     }
     
     @IBAction func buttonClicked( sender: Any) {
     
-        let pathToSound = Bundle.main.path(forResource: "car", ofType: "wav")!
-        let url = URL(fileURLWithPath: pathToSound)
+        let pathToSound = Bundle.main.path(forResource: "cafe", ofType: "wav")!
+        guard let url = MLModelManager.sharedManager.url else {
+            print("error")
+            return
+        }
         do
         {
             audioPlayer = try AVAudioPlayer(contentsOf: url)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nnv-bh-8be">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,6 +8,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WxB-fB-XrO">
+            <objects>
+                <navigationController id="Nnv-bh-8be" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8sp-AB-15p"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cU4-DK-uEm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lHH-eI-uPd" kind="relationship" relationship="rootViewController" id="YbT-Ja-sCR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozg-1u-eRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1468" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hai-py-guR">
+            <objects>
+                <viewController id="lHH-eI-uPd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7R1-v9-dte">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите аудио" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-jn-zrA">
+                                <rect key="frame" x="0.0" y="50" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Lag-71-1rC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XaM-FL-cxk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QgH-jB-e6m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XaM-FL-cxk" firstAttribute="top" secondItem="QgH-jB-e6m" secondAttribute="top" id="17L-nN-h2i"/>
+                            <constraint firstItem="QgH-jB-e6m" firstAttribute="bottom" secondItem="XaM-FL-cxk" secondAttribute="bottom" id="Zrw-jM-2fG"/>
+                            <constraint firstItem="QgH-jB-e6m" firstAttribute="trailing" secondItem="XaM-FL-cxk" secondAttribute="trailing" id="aqN-na-Vp0"/>
+                            <constraint firstItem="zxa-jn-zrA" firstAttribute="top" secondItem="7R1-v9-dte" secondAttribute="top" constant="50" id="b2G-Nd-LHC"/>
+                            <constraint firstItem="zxa-jn-zrA" firstAttribute="leading" secondItem="QgH-jB-e6m" secondAttribute="leading" id="eaq-DA-F0j"/>
+                            <constraint firstItem="QgH-jB-e6m" firstAttribute="trailing" secondItem="zxa-jn-zrA" secondAttribute="trailing" id="kmZ-8c-ezR"/>
+                            <constraint firstItem="XaM-FL-cxk" firstAttribute="leading" secondItem="QgH-jB-e6m" secondAttribute="leading" id="njr-Zh-fIU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rMt-LK-8TH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxN-v0-2Ws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="94"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,6 +77,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="sound_picture" imagePlacement="bottom" title="" subtitle="" buttonSize="large"/>
+                                <connections>
+                                    <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNN-Bh-V5I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="93.75"/>
+            <point key="canvasLocation" x="310" y="94"/>
         </scene>
     </scenes>
     <resources>
