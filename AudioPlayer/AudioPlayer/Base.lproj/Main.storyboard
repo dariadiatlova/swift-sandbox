@@ -2,9 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nnv-bh-8be">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,7 +82,11 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zJ4-gV-3xW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="0bd-WY-ZdU"/>
+                            <constraint firstItem="zJ4-gV-3xW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tMu-WV-Qrg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Button" destination="zJ4-gV-3xW" id="yim-2n-2lz"/>
@@ -95,9 +98,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sound_picture" width="256" height="198"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="sound_picture.png" width="256" height="198"/>
     </resources>
 </document>
