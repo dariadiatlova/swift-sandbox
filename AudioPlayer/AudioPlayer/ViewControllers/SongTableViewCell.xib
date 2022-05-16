@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="41u-Gr-5k7" customClass="SongTableViewCell" customModule="AudioPlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="41u-Gr-5k7" id="zal-YO-02c">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="f9t-Rg-gvA">
+                        <rect key="frame" x="16" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="YXo-ti-JSJ"/>
+                            <constraint firstAttribute="height" constant="64" id="YzU-gb-xYs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9o-1z-vL2">
+                        <rect key="frame" x="88" y="28" width="104" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvs-eT-54Q">
+                        <rect key="frame" x="5" y="79" width="410" height="1"/>
+                        <viewLayoutGuide key="safeArea" id="crV-fp-zu9"/>
+                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="1yJ-oC-Cwb"/>
+                            <constraint firstAttribute="height" constant="1" id="T5j-9m-MHb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z9o-1z-vL2" firstAttribute="leading" secondItem="f9t-Rg-gvA" secondAttribute="trailing" constant="8" id="2Ap-fO-AjD"/>
+                    <constraint firstItem="f9t-Rg-gvA" firstAttribute="top" secondItem="zal-YO-02c" secondAttribute="top" constant="8" id="832-6k-DiS"/>
+                    <constraint firstAttribute="bottom" secondItem="f9t-Rg-gvA" secondAttribute="bottom" constant="8" id="9S2-42-9g4"/>
+                    <constraint firstItem="z9o-1z-vL2" firstAttribute="centerY" secondItem="zal-YO-02c" secondAttribute="centerY" id="CGe-bI-myU"/>
+                    <constraint firstItem="f9t-Rg-gvA" firstAttribute="leading" secondItem="zal-YO-02c" secondAttribute="leading" constant="16" id="GpX-Za-lvI"/>
+                    <constraint firstAttribute="bottom" secondItem="pvs-eT-54Q" secondAttribute="bottom" id="HtK-hC-fAh"/>
+                    <constraint firstAttribute="trailing" secondItem="pvs-eT-54Q" secondAttribute="trailing" constant="5" id="Nqp-Hm-ZYT"/>
+                    <constraint firstItem="pvs-eT-54Q" firstAttribute="leading" secondItem="zal-YO-02c" secondAttribute="leading" constant="5" id="yHj-ZE-kTp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" notEnabled="YES"/>
+            </accessibility>
+            <connections>
+                <outlet property="nameSongLabel" destination="z9o-1z-vL2" id="T0c-jD-cK1"/>
+                <outlet property="songPhotoImageView" destination="f9t-Rg-gvA" id="A3V-yK-ipJ"/>
+            </connections>
+            <point key="canvasLocation" x="194.20289855072465" y="77.34375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sound_picture.png" width="256" height="198"/>
+    </resources>
+</document>
