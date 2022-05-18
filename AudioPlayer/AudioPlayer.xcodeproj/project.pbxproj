@@ -53,7 +53,7 @@
 		47D18B762829279800456B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47D18B782829279A00456B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D18B7B2829279A00456B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		47D18B7D2829279A00456B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47D18B7D2829279A00456B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				47D18B6E2829279800456B04 /* AudioPlayer */,
-				47D18B7D2829279A00456B04 /* Info.plist */,
 				47D18B6D2829279800456B04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +143,7 @@
 		47D18B6E2829279800456B04 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				47D18B7D2829279A00456B04 /* Info.plist */,
 				47BD331A2832AA8200356E42 /* Managers+Extensions */,
 				47BD33192832AA5700356E42 /* ViewControllers */,
 				47BD33182832A9CE00356E42 /* Storyboards */,
