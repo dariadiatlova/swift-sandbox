@@ -9,40 +9,53 @@ import UIKit
 import AVFoundation
 
 class DetailAudioViewController: UIViewController {
+    @IBOutlet weak var audioImageView: UIImageView!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var durationProgressView: UIProgressView!
     
     var audioPlayer: AVAudioPlayer?
     
-    var name: String?
-    
-    @IBOutlet var Button: UIButton!
+    var audioName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Button.setTitle("Car Sound", for: .normal)
-        let soundImage = UIImage(named: "sound_picture.png")
-        Button.setImage(soundImage?.withRenderingMode(.alwaysOriginal), for: .normal)
         
-        MLModelManager.sharedManager.enhanceAudio("cafe")
+        audioImageView.image = UIImage(named: audioName ?? "")
     }
     
-    @IBAction func buttonClicked( sender: Any) {
+    private func handlePlay(_ url: URL) {
+        if audioPlayer?.isPlaying ?? false {
+            audioPlayer?.stop()
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print(error)
+        }
+    }
     
-        let pathToSound = Bundle.main.path(forResource: "cafe", ofType: "wav")!
-        guard let url = MLModelManager.sharedManager.url else {
+    @IBAction func originalAudioButtonTapped(_ sender: Any) {
+        guard let pathToSound = Bundle.main.path(forResource: "cafe", ofType: "wav") else {
+            return
+        }
+        
+        let audioURL = URL(fileURLWithPath: pathToSound)
+        
+        handlePlay(audioURL)
+    }
+    
+    @IBAction func mlAudioButtonTapped(_ sender: Any) {
+        guard let urlOfMLAudio = MLModelManager.sharedManager.url else {
             print("error")
             return
         }
-        do
-        {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.play()
-        }
-        catch
-        {
-            print(error)
-        }
         
-        }
-
+        handlePlay(urlOfMLAudio)
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 

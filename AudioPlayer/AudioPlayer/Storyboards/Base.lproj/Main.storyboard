@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +48,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QgH-jB-e6m"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XaM-FL-cxk" firstAttribute="top" secondItem="QgH-jB-e6m" secondAttribute="top" id="17L-nN-h2i"/>
                             <constraint firstAttribute="bottom" secondItem="XaM-FL-cxk" secondAttribute="bottom" id="Zrw-jM-2fG"/>
@@ -75,24 +76,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-gV-3xW" colorLabel="IBBuiltInLabel-Orange">
-                                <rect key="frame" x="60" y="248" width="296" height="228"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="sound_picture" imagePlacement="bottom" title="" subtitle="" buttonSize="large"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-5e-Bdf">
+                                <rect key="frame" x="16" y="86" width="382" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="dTj-Gr-S2A"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw8-kY-ZHy">
+                                <rect key="frame" x="18" y="50" width="75" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="TxE-bY-x51"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Назад" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNN-Bh-V5I"/>
+                                    <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wsb-QS-M0l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6b-SN-2q6">
+                                <rect key="frame" x="47" y="399" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EkJ-uB-beX"/>
+                                    <constraint firstAttribute="height" constant="150" id="Poa-Kf-gk5"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Оригинал" imagePadding="5" titleAlignment="center">
+                                    <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                        <hierarchicalColors>
+                                            <color red="1" green="0.5409764051" blue="0.84731429820000004" alpha="0.88455392190000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                    <backgroundConfiguration key="background"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="80"/>
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="originalAudioButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJR-nf-GQv"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vP2-Qo-k45">
+                                <rect key="frame" x="16" y="365" width="382" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-NC-kCO">
+                                <rect key="frame" x="16" y="336" width="46" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wdr-2z-75z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urg-PP-PgE">
+                                <rect key="frame" x="217" y="399" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2cw-Wg-VL6"/>
+                                    <constraint firstAttribute="height" constant="150" id="rr4-U8-UI3"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Без шумов" imagePadding="5" titleAlignment="center">
+                                    <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                        <hierarchicalColors>
+                                            <color red="1" green="0.5409764051" blue="0.84731429820000004" alpha="0.88455392190000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                    <backgroundConfiguration key="background"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="80"/>
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mlAudioButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h35-M9-E2T"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zJ4-gV-3xW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="0bd-WY-ZdU"/>
-                            <constraint firstItem="zJ4-gV-3xW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tMu-WV-Qrg"/>
+                            <constraint firstItem="urg-PP-PgE" firstAttribute="top" secondItem="vP2-Qo-k45" secondAttribute="bottom" constant="30" id="5Kv-rq-owh"/>
+                            <constraint firstItem="vP2-Qo-k45" firstAttribute="top" secondItem="aq8-NC-kCO" secondAttribute="bottom" constant="8" id="7ju-lf-783"/>
+                            <constraint firstItem="vP2-Qo-k45" firstAttribute="leading" secondItem="aq8-NC-kCO" secondAttribute="leading" id="89a-S7-SLo"/>
+                            <constraint firstItem="vP2-Qo-k45" firstAttribute="bottom" secondItem="M6b-SN-2q6" secondAttribute="top" constant="-30" id="DVY-Kc-EDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ehL-5e-Bdf" secondAttribute="trailing" constant="16" id="H1J-GZ-2yz"/>
+                            <constraint firstItem="vP2-Qo-k45" firstAttribute="trailing" secondItem="ehL-5e-Bdf" secondAttribute="trailing" id="LL2-uo-Nva"/>
+                            <constraint firstItem="aq8-NC-kCO" firstAttribute="top" secondItem="ehL-5e-Bdf" secondAttribute="bottom" constant="10" id="Y9c-GQ-Gvg"/>
+                            <constraint firstItem="aq8-NC-kCO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dAR-1H-ov0"/>
+                            <constraint firstItem="kw8-kY-ZHy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="hKi-YF-et5"/>
+                            <constraint firstItem="M6b-SN-2q6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-85" id="jvF-o6-Q4X"/>
+                            <constraint firstItem="ehL-5e-Bdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kYs-mR-BaO"/>
+                            <constraint firstItem="kw8-kY-ZHy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="rT1-tv-jq1"/>
+                            <constraint firstItem="urg-PP-PgE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="85" id="wHp-An-6VH"/>
+                            <constraint firstItem="ehL-5e-Bdf" firstAttribute="top" secondItem="kw8-kY-ZHy" secondAttribute="bottom" constant="14" id="xIL-fQ-bYa"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Button" destination="zJ4-gV-3xW" id="yim-2n-2lz"/>
+                        <outlet property="audioImageView" destination="ehL-5e-Bdf" id="fSj-Bo-PcY"/>
+                        <outlet property="durationLabel" destination="aq8-NC-kCO" id="ZDU-Ug-0y8"/>
+                        <outlet property="durationProgressView" destination="vP2-Qo-k45" id="Gve-aG-DCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,9 +190,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sound_picture" width="128" height="128"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -47,8 +47,13 @@ extension ListAudioViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailAudioViewController") as! DetailAudioViewController
-        vc.name = Constants().listOfAudio[indexPath.row]
-        self.navigationController?.pushViewController(vc, animated: true)
+        let audioName = Constants().listOfAudio[indexPath.row]
+        if MLModelManager.sharedManager.enhanceAudio(audioName) {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailAudioViewController") as! DetailAudioViewController
+            vc.audioName = audioName
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            print("error")
+        }
     }
 }

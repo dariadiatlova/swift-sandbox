@@ -25,9 +25,9 @@ class MLModelManager {
         }
     }
     
-    func enhanceAudio(_ name: String) -> URL? {
+    func enhanceAudio(_ name: String) -> Bool {
         guard let floatArrayOfAudio = convertAudio(name) else {
-            return nil
+            return false
         }
         let coreMLArray = try! MLMultiArray(shape: [1, 1, 240000], dataType: .float32)
         
@@ -44,14 +44,12 @@ class MLModelManager {
                 outputModel.append(output?.var_748[index] as! Float32)
             }
             convertToAudio(outputModel)
-            
+            return true
         } catch {
             print("error input")
         }
         
-        
-        
-        return nil
+        return false
     }
     
     private func convertAudio(_ name: String) -> [Float32]? {
@@ -96,13 +94,11 @@ class MLModelManager {
         }
 
         let outputBuffer = AVAudioPCMBuffer(pcmFormat: bufferFormat, frameCapacity: AVAudioFrameCount(array.count))
-
-//        // i had my samples in doubles, so convert then write
-//
+        
         for i in 0..<array.count {
             outputBuffer?.floatChannelData!.pointee[i] = Float( array[i] )
         }
-//        outputBuffer?.floatChannelData!.pointee = array
+        
         outputBuffer?.frameLength = AVAudioFrameCount( array.count )
 
             do {
@@ -111,16 +107,6 @@ class MLModelManager {
             } catch let error as NSError {
                 print("error:", error.localizedDescription)
             }
-            
-//            var audioPlayer = AVAudioPlayer()
-//            do {
-//                print("paly")
-//                audioPlayer = try AVAudioPlayer(contentsOf: urlURL)
-//                audioPlayer.prepareToPlay()
-//                audioPlayer.play()
-//            } catch {
-//                print("error")
-//            }
         
     }
     
