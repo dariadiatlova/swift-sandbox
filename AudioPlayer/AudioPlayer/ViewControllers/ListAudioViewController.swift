@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MKGradientView
 import UIKit
 
 class ListAudioViewController: UIViewController {
@@ -19,12 +20,22 @@ class ListAudioViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        let backgroundView = GradientView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+//        backgroundView.type = .linear
+//        backgroundView.colors = [UIColor.cyan, UIColor.darkGray]
+//        backgroundView.locations = [0, 1]
+//        backgroundView.startPoint = CGPoint(x: 0.0, y: 0.0)
+//        backgroundView.endPoint = CGPoint(x: 1.0, y: 1.0)
+//        tableView.backgroundView = backgroundView
+        
+        showAboutApp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        showAboutApp()
+        
     }
     
     private func showAboutApp() {

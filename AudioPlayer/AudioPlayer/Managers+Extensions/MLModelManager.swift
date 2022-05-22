@@ -103,7 +103,6 @@ class MLModelManager {
 
             do {
                 try audioFile?.write(from: outputBuffer!)
-                print("save")
             } catch let error as NSError {
                 print("error:", error.localizedDescription)
             }

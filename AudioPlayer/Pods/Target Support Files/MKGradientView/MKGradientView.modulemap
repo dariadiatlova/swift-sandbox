@@ -1,0 +1,6 @@
+framework module MKGradientView {
+  umbrella header "MKGradientView-umbrella.h"
+
+  export *
+  module * { export * }
+}

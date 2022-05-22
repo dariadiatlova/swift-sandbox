@@ -8,12 +8,12 @@
 import Foundation
 
 class Constants {
-    let listOfAudio: [String] = ["cafe",
-                                 "car",
-                                 "kitchen",
-                                 "meeting",
-                                 "metro",
-                                 "office",
-                                 "park",
-                                 "traffic"]
+    let listOfAudio: [String] = ["Alena",
+                                 "Kate",
+                                 "Kirill",
+                                 "Misha",
+                                 "Tisha",
+                                 "Stas",
+                                 "Vlad"
+                                ]
 }

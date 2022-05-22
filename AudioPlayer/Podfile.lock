@@ -1,0 +1,16 @@
+PODS:
+  - MKGradientView (2.0.2)
+
+DEPENDENCIES:
+  - MKGradientView
+
+SPEC REPOS:
+  trunk:
+    - MKGradientView
+
+SPEC CHECKSUMS:
+  MKGradientView: 3ba213002a8258d96d098188655596c5f35ab659
+
+PODFILE CHECKSUM: 69d9c3d20be91fac5998f6c097de30381a025da2
+
+COCOAPODS: 1.11.3

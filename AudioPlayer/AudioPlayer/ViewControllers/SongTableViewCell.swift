@@ -17,7 +17,7 @@ class SongTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         songPhotoImageView.layer.cornerRadius = 32
-        songPhotoImageView.layer.borderColor = UIColor.cyan.cgColor
+        songPhotoImageView.layer.borderColor = UIColor.lightGray.cgColor
         songPhotoImageView.layer.borderWidth = 1
     }
     
